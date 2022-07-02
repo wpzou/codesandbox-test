@@ -9,15 +9,24 @@ const onClickAdd = () => {
   const div = document.createElement("div");
   div.className = "list-row";
 
-  console.log(inputText);
-
   // liタグ生成
   const li = document.createElement("li");
-  // li.innerText = String(inputText);
   li.innerText = inputText;
+
+  // button(完了)タグ作成
+  const completeButton = document.createElement("button");
+  completeButton.innertText = "完了";
+
+  // button(削除)タグ作成
+  const deleteButton = document.createElement("button");
+  deleteButton.innertText = "削除";
+
+  console.log(completeButton);
 
   // divタグの子要素に各要素を設定
   div.appendChild(li);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
 
   // 未完了リストに追加
   document.getElementById("incomplete-list").appendChild(div);
